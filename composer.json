@@ -1,0 +1,22 @@
+{
+    "name": "apinyansky/mail_validator",
+    "description": "This package is intended for validation email addresses and MX records for specified domain",
+    "type": "library",
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "ext-sockets": "*"
+    },
+    "authors": [
+        {
+            "name": "MadFisherman",
+            "email": "apinyansky@enex.market"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+    }
+  }
+}
