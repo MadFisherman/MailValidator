@@ -1,10 +1,8 @@
-<?php 
-
-namespace App;
+<?php
 
 class MailValidator
 {
-    private $reg_exp = '/^(([\wА-Яа-я]{1,})@([\wА-Яа-я]{1,}\.)+[A-Za-zА-Яа-я]{2,})$/ui';
+    private $regExp = '/^(([\wА-Яа-я]{1,})@([\wА-Яа-я]{1,}\.)+[A-Za-zА-Яа-я]{2,})$/ui';
     private $mailAddress;
 
     public function validate($mailAddress)
@@ -20,10 +18,10 @@ class MailValidator
 
     private function validateMailAddress()
     {
-        return preg_match($this->reg_exp, $this->mailAddress);
+        return preg_match($this->regExp, $this->mailAddress);
     }
     
-    private function checkMXRecord()
+    private function checkMxRecord()
     {
         $arMailAddress = explode('@', $this->mailAddress);
         return getmxrr($arMailAddress[1], $hosts);
