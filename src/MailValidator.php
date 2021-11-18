@@ -15,7 +15,7 @@ class MailValidator
                 return true;
             }
         }
-        return false;
+        throw new \Exception('Mail is invalid');
     }
 
     private function validateMailAddress()
