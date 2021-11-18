@@ -12,7 +12,7 @@ class MailValidator
         $this->mailAddress = $mailAddress;
         if($this->validateMailAddress()) {
             if ($this->checkMXRecord()) {
-                return true;
+                throw new \Exception('Mail is valid');
             }
         }
         throw new \Exception('Mail is invalid');
