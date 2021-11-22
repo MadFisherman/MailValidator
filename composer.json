@@ -3,7 +3,7 @@
     "description": "This package is intended for validation email addresses and MX records for specified domain",
     "type": "library",
     "require": {
-        "php": ">=7.4",
+        "php": ">=5.3",
         "ext-json": "*",
         "ext-sockets": "*"
     },
